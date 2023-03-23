@@ -1,0 +1,35 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Page
+    x:Class="HouseholdAccountBook.TitlePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HouseholdAccountBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel 
+            HorizontalAlignment="Center"
+            Margin="0 5 0 0">
+            <TextBlock
+                x:Name="Title"
+                Text="HouseholdAccountBook"
+                FontSize="60"
+                FontFamily="{StaticResource Raleway-Regular}"
+                Grid.Column="0"
+                Grid.Row="0">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#ffccff" Offset="0"/>
+                        <GradientStop Color="#c070c0" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            
+        </StackPanel>
+    </Grid>
+</Page>

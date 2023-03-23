@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "HouseholdAccountBook (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "HouseholdAccountBook (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
