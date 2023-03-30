@@ -15,10 +15,13 @@
     <None Remove="Assets\bookmark.png" />
     <None Remove="Assets\home.png" />
     <None Remove="Assets\pencil.png" />
+    <None Remove="Assets\settings.png" />
+    <None Remove="Pages\History.xaml" />
+    <None Remove="Pages\Home.xaml" />
+    <None Remove="Pages\Settings.xaml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fonts\Raleway-Regular.ttf" />
-    <None Include="TitlePage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,7 +50,17 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
-    <Page Update="TitlePage.xaml">
+    <Page Update="Pages\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\History.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\Home.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

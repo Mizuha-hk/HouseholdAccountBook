@@ -14,7 +14,7 @@
                 <!-- Other merged dictionaries here -->
             </ResourceDictionary.MergedDictionaries>
             <!-- Other app resources here -->
-            <FontFamily x:Key="Raleway-Regular">/Fonts/Raleway-Regular.ttf#raleway-regular</FontFamily>
+            <FontFamily x:Key="Raleway">/Fonts/Raleway-Regular.ttf#Raleway</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

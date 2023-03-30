@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation and Contributors.
 // Licensed under the MIT License.
 
+using HouseholdAccountBook.Pages;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -33,7 +34,27 @@ namespace HouseholdAccountBook
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(TitleBar);
 
+            MainContent.Navigate(typeof(Home));
         }
 
+        public void HomeButtonClicked(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(typeof(Home));
+        }
+
+        public void RecordButtonClicked(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(typeof (Record));
+        }
+
+        public void HistoryButtonClicked(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(typeof (History));
+        }
+
+        public void SettingButtonClicked(object sender, RoutedEventArgs e)
+        {
+            MainContent.Navigate(typeof(Settings));
+        }
     }
 }

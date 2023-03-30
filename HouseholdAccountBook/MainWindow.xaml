@@ -50,12 +50,11 @@
                 </LinearGradientBrush>
             </Border.BorderBrush>
             <TextBlock
-                Text="HAB"
+                Text="HouseholdAccountBook"
                 VerticalAlignment="Center"
                 Foreground="#ffccff"
                 FontSize="30"
-                FontFamily="{StaticResource Raleway-Regular}"
-                FontStyle="Italic"
+                FontFamily="{StaticResource Raleway}"
                 Margin="10 0 0 0"/>
         </Border>
         
@@ -71,7 +70,7 @@
                 BorderBrush="#ffccff"
                 Background="#111111">
                 <Grid
-                    RowDefinitions="Auto,Auto,Auto,*">
+                    RowDefinitions="Auto,Auto,Auto,Auto,*">
                     
                     <!--HomeButton-->
                     <Button
@@ -79,7 +78,8 @@
                         Grid.Row="0"
                         VerticalAlignment="Top"
                         Width="198"
-                        Margin="1 5 1 0">
+                        Margin="1 5 1 0"
+                        Click="HomeButtonClicked">
                         <Grid
                             ColumnDefinitions="32,*">
                             <Image
@@ -89,6 +89,7 @@
                                 Width="32"/>
                             <TextBlock
                                 Text="Home"
+                                FontFamily="{StaticResource Raleway}"
                                 Grid.Column="1"
                                 Grid.Row="0"
                                 VerticalAlignment="Center"
@@ -102,7 +103,8 @@
                         Grid.Row="1"
                         VerticalAlignment="Top"
                         Width="198"
-                        Margin="1 3 1 0">
+                        Margin="1 3 1 0"
+                        Click="RecordButtonClicked">
                         <Grid
                             ColumnDefinitions="32,*">
                             <Image
@@ -112,6 +114,7 @@
                                 Width="32"/>
                             <TextBlock
                                 Text="Record"
+                                FontFamily="{StaticResource Raleway}"
                                 Grid.Column="1"
                                 Grid.Row="0"
                                 VerticalAlignment="Center"
@@ -119,13 +122,14 @@
                         </Grid>
                     </Button>
                     
-                    <!--VeiwRecordButton-->
+                    <!--HistoryButton-->
                     <Button
-                        x:Name="VeiwRecordButton"
+                        x:Name="HistoryButton"
                         Grid.Row="2"
                         VerticalAlignment="Top"
                         Width="198"
-                        Margin="1 3 1 0">
+                        Margin="1 3 1 0"
+                        Click="HistoryButtonClicked">
                         <Grid
                             ColumnDefinitions="32,*">
                             <Image
@@ -135,7 +139,33 @@
                                 HorizontalAlignment="Left"
                                 Width="32"/>
                             <TextBlock
-                                Text="Veiw Record"
+                                Text="History"
+                                FontFamily="{StaticResource Raleway}"
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                VerticalAlignment="Center"
+                                Margin="10 0 0 0"/>
+                        </Grid>
+                    </Button>
+                    
+                    <!--SettingButton-->
+                    <Button
+                        x:Name="SettingButton"
+                        Grid.Row="3"
+                        VerticalAlignment="Top"
+                        Width="198"
+                        Margin="1 3 1 0"
+                        Click="SettingButtonClicked">
+                        <Grid
+                            ColumnDefinitions="32,*">
+                            <Image
+                                Source="Assets/settings.png"
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Width="32"/>
+                            <TextBlock
+                                Text="Settings"
+                                FontFamily="{StaticResource Raleway}"
                                 Grid.Column="1"
                                 Grid.Row="0"
                                 VerticalAlignment="Center"
@@ -147,7 +177,8 @@
             
             <!--MainContent-->
             <Frame
-                x:Name="MainContent"/>
+                x:Name="MainContent"
+                Grid.Column="1"/>
         </Grid>
     </Grid>
 </Window>
