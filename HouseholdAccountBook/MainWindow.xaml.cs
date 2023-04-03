@@ -37,6 +37,8 @@ namespace HouseholdAccountBook
             MainContent.Navigate(typeof(Home));
         }
 
+
+        //サイドバーによるページ遷移処理------------------
         public void HomeButtonClicked(object sender, RoutedEventArgs e)
         {
             MainContent.Navigate(typeof(Home));
@@ -56,5 +58,6 @@ namespace HouseholdAccountBook
         {
             MainContent.Navigate(typeof(Settings));
         }
+        //-------------------------------------------
     }
 }

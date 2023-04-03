@@ -1,6 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- Copyright (c) Microsoft Corporation and Contributors. -->
 <!-- Licensed under the MIT License. -->
-
 <Application
     x:Class="HouseholdAccountBook.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"

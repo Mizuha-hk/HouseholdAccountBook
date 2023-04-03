@@ -1,4 +1,4 @@
-<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
 <!-- Licensed under the MIT License. -->
 
 <Window
@@ -14,6 +14,7 @@
     <Grid 
         ColumnDefinitions="*,Auto" 
         RowDefinitions="32,50,*">
+        
         <!--TitleBar-->
         <StackPanel 
             x:Name="TitleBar"
@@ -58,123 +59,125 @@
                 Margin="10 0 0 0"/>
         </Border>
         
-         <!--SideBar-->       
+         <!--SideBar-->
         <Grid
             ColumnDefinitions="200,*"
             RowDefinitions="*,Auto"
             Grid.Row="2">
-            <Border
-                Grid.Column="0"
-                Grid.Row="0"
-                BorderThickness="0 0 0.5 0"
-                BorderBrush="#ffccff"
-                Background="#111111">
-                <Grid
-                    RowDefinitions="Auto,Auto,Auto,Auto,*">
-                    
-                    <!--HomeButton-->
-                    <Button
-                        x:Name="HomeButton"
-                        Grid.Row="0"
-                        VerticalAlignment="Top"
-                        Width="198"
-                        Margin="1 5 1 0"
-                        Click="HomeButtonClicked">
-                        <Grid
-                            ColumnDefinitions="32,*">
-                            <Image
-                                Source="Assets/home.png"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                Width="32"/>
-                            <TextBlock
-                                Text="Home"
-                                FontFamily="{StaticResource Raleway}"
-                                Grid.Column="1"
-                                Grid.Row="0"
-                                VerticalAlignment="Center"
-                                Margin="10 0 0 0"/>
-                        </Grid>
-                    </Button>
-                    
-                    <!--RecordButton-->
-                    <Button
-                        x:Name="RecordButton"
-                        Grid.Row="1"
-                        VerticalAlignment="Top"
-                        Width="198"
-                        Margin="1 3 1 0"
-                        Click="RecordButtonClicked">
-                        <Grid
-                            ColumnDefinitions="32,*">
-                            <Image
-                                Source="Assets/pencil.png"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                Width="32"/>
-                            <TextBlock
-                                Text="Record"
-                                FontFamily="{StaticResource Raleway}"
-                                Grid.Column="1"
-                                Grid.Row="0"
-                                VerticalAlignment="Center"
-                                Margin="10 0 0 0"/>
-                        </Grid>
-                    </Button>
-                    
-                    <!--HistoryButton-->
-                    <Button
-                        x:Name="HistoryButton"
-                        Grid.Row="2"
-                        VerticalAlignment="Top"
-                        Width="198"
-                        Margin="1 3 1 0"
-                        Click="HistoryButtonClicked">
-                        <Grid
-                            ColumnDefinitions="32,*">
-                            <Image
-                                Source="Assets/bookmark.png"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                HorizontalAlignment="Left"
-                                Width="32"/>
-                            <TextBlock
-                                Text="History"
-                                FontFamily="{StaticResource Raleway}"
-                                Grid.Column="1"
-                                Grid.Row="0"
-                                VerticalAlignment="Center"
-                                Margin="10 0 0 0"/>
-                        </Grid>
-                    </Button>
-                    
-                    <!--SettingButton-->
-                    <Button
-                        x:Name="SettingButton"
-                        Grid.Row="3"
-                        VerticalAlignment="Top"
-                        Width="198"
-                        Margin="1 3 1 0"
-                        Click="SettingButtonClicked">
-                        <Grid
-                            ColumnDefinitions="32,*">
-                            <Image
-                                Source="Assets/settings.png"
-                                Grid.Column="0"
-                                Grid.Row="0"
-                                Width="32"/>
-                            <TextBlock
-                                Text="Settings"
-                                FontFamily="{StaticResource Raleway}"
-                                Grid.Column="1"
-                                Grid.Row="0"
-                                VerticalAlignment="Center"
-                                Margin="10 0 0 0"/>
-                        </Grid>
-                    </Button>
-                </Grid>
-            </Border>
-            
+            <ScrollViewer
+                VerticalScrollBarVisibility="Auto">
+                <Border
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    BorderThickness="0 0 0.5 0"
+                    BorderBrush="#ffccff"
+                    Background="#111111">
+                    <Grid
+                        RowDefinitions="Auto,Auto,Auto,Auto,*">
+
+                        <!--HomeButton-->
+                        <Button
+                           x:Name="HomeButton"
+                           Grid.Row="0"
+                           VerticalAlignment="Top"
+                           Width="198"
+                            Margin="1 5 1 0"
+                            Click="HomeButtonClicked">
+                            <Grid
+                               ColumnDefinitions="32,*">
+                                <Image
+                                   Source="Assets/home.png"
+                                   Grid.Column="0"
+                                   Grid.Row="0"
+                                    Width="32"/>
+                                <TextBlock
+                                    Text="Home"
+                                    FontFamily="{StaticResource Raleway}"
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    VerticalAlignment="Center"
+                                    Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+
+                        <!--RecordButton-->
+                        <Button
+                            x:Name="RecordButton"
+                            Grid.Row="1"
+                            VerticalAlignment="Top"
+                            Width="198"
+                            Margin="1 3 1 0"
+                            Click="RecordButtonClicked">
+                            <Grid
+                                ColumnDefinitions="32,*">
+                                <Image
+                                    Source="Assets/pencil.png"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Width="32"/>
+                                <TextBlock
+                                   Text="Record"
+                                   FontFamily="{StaticResource Raleway}"
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    VerticalAlignment="Center"
+                                    Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+
+                        <!--HistoryButton-->
+                        <Button
+                            x:Name="HistoryButton"
+                            Grid.Row="2"
+                            VerticalAlignment="Top"
+                            Width="198"
+                            Margin="1 3 1 0"
+                            Click="HistoryButtonClicked">
+                            <Grid
+                                ColumnDefinitions="32,*">
+                                <Image
+                                    Source="Assets/bookmark.png"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    HorizontalAlignment="Left"
+                                    Width="32"/>
+                                <TextBlock
+                                    Text="History"
+                                    FontFamily="{StaticResource Raleway}"
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    VerticalAlignment="Center"
+                                    Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+
+                        <!--SettingButton-->
+                        <Button
+                            x:Name="SettingButton"
+                            Grid.Row="3"
+                            VerticalAlignment="Top"
+                            Width="198"
+                            Margin="1 3 1 0"
+                            Click="SettingButtonClicked">
+                            <Grid
+                                ColumnDefinitions="32,*">
+                                <Image
+                                   Source="Assets/settings.png"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Width="32"/>
+                                <TextBlock
+                                    Text="Settings"
+                                    FontFamily="{StaticResource Raleway}"
+                                    Grid.Column="1"
+                                    Grid.Row="0"
+                                    VerticalAlignment="Center"
+                                    Margin="10 0 0 0"/>
+                            </Grid>
+                        </Button>
+                    </Grid>
+                </Border>
+            </ScrollViewer>
             <!--MainContent-->
             <Frame
                 x:Name="MainContent"

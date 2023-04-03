@@ -1,4 +1,4 @@
-<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+﻿<!-- Copyright (c) Microsoft Corporation and Contributors. -->
 <!-- Licensed under the MIT License. -->
 
 <Page
@@ -11,9 +11,59 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBlock
-            Text="This is Home"
-            />
-    </Grid>
+    <ScrollViewer
+        VerticalScrollBarVisibility="Auto">
+        <Grid
+            ColumnDefinitions="Auto,Auto">
+            <Border 
+                Grid.Column="0"
+                BorderThickness="0 0 1 0"
+                BorderBrush="#333333"/>
+            <Grid
+                RowDefinitions="Auto,Auto,Auto">
+
+                <TextBlock
+                    Text="あなたの目標"
+                    FontSize="25"
+                    Margin="5 5 0 0"/>
+
+                <!--PieChartsBaseColor-->
+                <Ellipse
+                    Grid.Row="1"
+                    Width="226"
+                    Height="226"
+                    Margin="25 20 25 0"
+                    Fill="#0000"
+                    Stroke="#333333"
+                    StrokeThickness="6"/>
+
+                <!--PieChartsMain
+                        StrokeDashArray="0 (128 - Rate) 128"-->
+                <Ellipse
+                    x:Name="LimitPointCharts"
+                    Grid.Row="1"
+                    Width="226"
+                    Height="226"
+                    Margin="15 20 15 0"
+                    Fill="#0000"
+                
+                    StrokeDashArray="0 57.5 115"
+                
+                    Stroke="#fa99f9"
+                
+                    StrokeThickness="6"
+                    StrokeDashCap="Round"
+                    CenterPoint="113 113 0"
+                    Rotation="270"/>
+
+                <!--Text-->
+                <TextBlock
+                    Grid.Row="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="200 / 400 円"
+                    FontSize="26"/>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
 </Page>
